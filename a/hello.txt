@@ -1,0 +1,147 @@
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{
+  "level": "error",
+  "message": "error",
+  "error": {
+    "message": "error text",
+    "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+  }
+}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:5:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{
+  "level": "error",
+  "message": "error",
+  "error": {
+    "message": "error text",
+    "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+  }
+}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{
+  "level": "error",
+  "message": "error",
+  "error": {
+    "message": "error text",
+    "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+  }
+}
+{
+  "level": "error",
+  "message": "error",
+  "error": {
+    "message": "error text",
+    "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+  }
+}
+{"level":"error","message":"error","error":{"message":"error text","stare":"Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{
+ "level": "error",
+ "message": "error",
+ "error": {
+  "message": "error text",
+  "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error",
+ "error": {
+  "message": "error text",
+  "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:27\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text",
+  "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text",
+  "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text",
+  "stare": "Error: error text\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{
+ "level": "error",
+ "message": "error text",
+ "error": {
+  "message": "error text in",
+  "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+ }
+}
+{"level":"error","message":"error text","error":{"message":"error text in","stare":"Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{
+  "level": "error",
+  "message": "error text",
+  "error": {
+    "message": "error text in",
+    "stare": "Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"
+  }
+}
+{"level":"error","message":"error text","error":{"message":"error text in","stare":"Error: error text in\n    at /Users/aleksey/projects/cssq/a.ts:6:32\n    at moduleEvaluation (native)\n    at moduleEvaluation (native)\n    at <anonymous> (native:2)"}}
+{"level":"error","message":"error text"}
+{"level":"error","message":"error text"}
+{"level":"error","message":"error text"}
+{"level":"error","message":"error text"}
+{"level":"error","message":"/helloerror text"}
+{"level":"error","message":"/hello\nerror text"}
+{"level":"error","message":"/helloerror text"}
+{"level":"error","message":"/hello error text"}
+{"level":"error","message":"/hello:: error text"}
