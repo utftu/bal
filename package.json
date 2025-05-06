@@ -6,6 +6,16 @@
     "build": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
     "types": "tsc --project tsconfig.types.json"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/pinod.js",
+      "types": "./dist/types/pinod.d.ts"
+    },
+    "./file-provider": {
+      "import": "./dist/file-provider.js",
+      "types": "./dist/types/file-provider.d.ts"
+    }
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
