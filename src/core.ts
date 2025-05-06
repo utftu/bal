@@ -1,15 +1,17 @@
-import { ConsoleProvider } from "./console-provider.ts";
+import { getConsoleProvider } from "./console-provider.ts";
 import { FileProvider } from "./file-provider.ts";
 import type { LogEnt, Provider } from "./types.ts";
 
+const defaultProviders = [
+  getConsoleProvider(),
+  new FileProvider({ infoPath: "./hello.txt" }),
+];
+
 export class LoggerCore {
   loggerStreams: TransformStream<LogEnt, LogEnt> = new TransformStream();
-  private providers: Provider[] = [
-    new ConsoleProvider(),
-    new FileProvider("./a/hello.txt"),
-  ];
+  private providers: Provider[];
 
-  constructor(providers: Provider[] = []) {
+  constructor(providers: Provider[] = defaultProviders) {
     this.providers = providers;
   }
 

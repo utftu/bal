@@ -1,74 +1,93 @@
 import { LoggerCore } from "./core.ts";
-import type { LevelConfig, Provider } from "./types.ts";
+import type { LevelConfig, LogEnt, Provider } from "./types.ts";
+
+const defaultLevelConfig: LevelConfig = {
+  info: true,
+  debug: true,
+  warn: true,
+  error: true,
+};
 
 export type LoggerProps = {
   providers?: Provider[];
   prefix?: string;
   core?: LoggerCore;
+  levelConfig?: Partial<LevelConfig>;
 };
 
 export class Logger {
   core: LoggerCore;
   prefix: string;
+  showTime: boolean = false;
 
-  levelConfig: LevelConfig = {
-    info: true,
-    debug: true,
-    warn: true,
-    error: true,
-  };
+  levelConfig: LevelConfig;
+  props: Record<string, any> = {};
 
-  constructor({ prefix = "", core }: LoggerProps) {
+  constructor({ prefix = "", core, levelConfig }: LoggerProps) {
     this.core = core ?? new LoggerCore();
     this.prefix = prefix;
+    this.levelConfig = { ...defaultLevelConfig, ...levelConfig };
   }
 
   log(text: string) {
     if (this.levelConfig.info === false) {
       return;
     }
-    this.core.write({ level: "info", message: this.prefix + text });
+    this.core.write({
+      level: "info",
+      message: text,
+      prefix: this.prefix,
+      props: this.props,
+    });
   }
   debug(text: string) {
     if (this.levelConfig.debug === false) {
       return;
     }
-    this.core.write({ level: "debug", message: this.prefix + text });
+    this.core.write({
+      level: "debug",
+      message: text,
+      props: this.props,
+      prefix: this.prefix,
+    });
   }
   warn(text: string) {
     if (this.levelConfig.warn === false) {
       return;
     }
-    this.core.write({ level: "warn", message: this.prefix + text });
+    this.core.write({
+      level: "warn",
+      message: text,
+      prefix: this.prefix,
+      props: this.props,
+    });
   }
 
-  error(text: string): void;
-  error(error: Error): void;
-  error(text: string, error: Error): void;
-  error(textOrError: string | Error, maybeError?: Error): void {
+  error(text: string, error?: Error) {
     if (this.levelConfig.error === false) {
       return;
     }
+    this.core.write({
+      level: "error",
+      message: text,
+      prefix: this.prefix,
+      props: {
+        ...this.props,
+        error,
+      },
+    });
+  }
 
-    if (textOrError instanceof Error) {
-      // Если первый аргумент — ошибка
-      this.core.write({
-        level: "error",
-        message: this.prefix + textOrError.message,
-        error: textOrError,
-      });
-    } else {
-      // Первый аргумент — текст
-      if (maybeError instanceof Error) {
-        this.core.write({
-          level: "error",
-          message: this.prefix + textOrError,
-          error: maybeError,
-        });
-      } else {
-        this.core.write({ level: "error", message: this.prefix + textOrError });
-      }
+  child({ prefix, props }: { prefix?: string; props?: Record<string, any> }) {
+    const newLogger = copyLogger(this);
+    if (typeof prefix === "string") {
+      newLogger.prefix = prefix;
     }
+    newLogger.props = {
+      ...this.props,
+      ...props,
+    };
+    return newLogger;
   }
 }
 
@@ -77,6 +96,6 @@ export const copyLogger = (logger: Logger) => {
     prefix: logger.prefix,
     core: logger.core,
   });
-  newLogger.levelConfig = logger.levelConfig;
+  newLogger.levelConfig = { ...logger.levelConfig };
   return newLogger;
 };

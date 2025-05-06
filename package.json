@@ -1,7 +1,11 @@
 {
-  "name": "cssq",
+  "name": "pinod",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
+    "types": "tsc --project tsconfig.types.json"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
