@@ -26,8 +26,8 @@
     "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
     "paths": {
-      "pinod/file-provider": ["./dist/types/file-provider.d.ts"],
-      "pinod": ["./dist/types/pinod.d.ts"]
+      "bal/file-provider": ["./dist/types/file-provider.d.ts"],
+      "bal": ["./dist/types/bal.d.ts"]
     }
   }
 }
