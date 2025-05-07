@@ -22,7 +22,6 @@ const defaultFormat = (logEnt: LogEnt) => {
   }
 
   if (objToJson.prefix === "") {
-    // @ts-ignore
     delete objToJson.prefix;
   }
 
