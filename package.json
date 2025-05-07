@@ -10,6 +10,9 @@
     "build-old": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
     "types": "tsc --project tsconfig.types.json"
   },
+  "files": [
+    "./dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/pinod.js",
