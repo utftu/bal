@@ -2,12 +2,11 @@
   "name": "pinod",
   "module": "index.ts",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "build-file-provider": "bun build ./src/file-provider.ts --target node --outdir ./dist",
     "build-pinod": "bun build ./src/pinod.ts --outdir ./dist --env=disable",
     "build": "bun run build-pinod && bun run build-file-provider && bun run types",
-    "build1": "bun run build-pinod && build-file-provider && && bun run types",
-    "build-old": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
     "types": "tsc --project tsconfig.types.json"
   },
   "files": [
