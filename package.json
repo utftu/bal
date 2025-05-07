@@ -1,12 +1,12 @@
 {
-  "name": "bal",
-  "main": "./dist/bal.js",
+  "name": "balg",
+  "main": "./dist/balg.js",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "build-file-provider": "bun build ./src/file-provider.ts --target node --outdir ./dist",
-    "build-bal": "bun build ./src/bal.ts --outdir ./dist --env=disable",
-    "build": "bun run build-bal && bun run build-file-provider && bun run types",
+    "build-balg": "bun build ./src/balg.ts --outdir ./dist --env=disable",
+    "build": "bun run build-balg && bun run build-file-provider && bun run types",
     "types": "tsc --project tsconfig.types.json"
   },
   "files": [
@@ -14,8 +14,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/bal.js",
-      "types": "./dist/types/bal.d.ts"
+      "import": "./dist/balg.js",
+      "types": "./dist/types/balg.d.ts"
     },
     "./file-provider": {
       "import": "./dist/file-provider.js",
