@@ -1,6 +1,6 @@
 {
   "name": "pinod",
-  "module": "index.ts",
+  "main": "./dist/pinod.js",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
