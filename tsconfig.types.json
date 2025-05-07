@@ -6,5 +6,5 @@
     "declaration": true,
     "noEmit": false
   },
-  "include": ["src/pinod.ts"]
+  "include": ["src"]
 }

@@ -31,6 +31,13 @@ const defaultFormat = (logEnt: LogEnt) => {
   return json;
 };
 
+export type FileProviderOptions = {
+  errorPath?: string;
+  infoPath: string;
+  warnPath?: string;
+  debugPath?: string;
+};
+
 export class FileProvider implements Provider {
   formatter = defaultFormat;
   private pathsToFiles: {
@@ -45,12 +52,7 @@ export class FileProvider implements Provider {
     debugPath,
     warnPath,
     infoPath,
-  }: {
-    errorPath?: string;
-    infoPath: string;
-    warnPath?: string;
-    debugPath?: string;
-  }) {
+  }: FileProviderOptions) {
     this.pathsToFiles = {
       infoPath,
       errorPath: errorPath ?? infoPath,

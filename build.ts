@@ -1,3 +1,20 @@
+import { stat } from "node:fs/promises";
+
+async function getFileSize(path: string): Promise<string> {
+  const { size } = await stat(path);
+  return formatSize(size);
+}
+
+function formatSize(bytes: number): string {
+  const units = ["B", "KB", "MB", "GB"];
+  let i = 0;
+  while (bytes >= 1024 && i < units.length - 1) {
+    bytes /= 1024;
+    i++;
+  }
+  return `${bytes.toFixed(2)} ${units[i]}`;
+}
+
 // build.ts
 const entries = [
   { input: "./src/pinod.ts", output: "./dist" },
@@ -5,30 +22,19 @@ const entries = [
 ];
 
 for (const entry of entries) {
-  console.log(`📦 Building ${entry.input}...`);
   const result = await Bun.build({
     entrypoints: [entry.input],
     outdir: entry.output,
     target: "node",
     format: "esm",
-    minify: false,
     env: "disable",
   });
+
+  const path = result.outputs[0]!.path;
+  console.log("Output", result.outputs[0]?.path, await getFileSize(path));
 
   if (!result.success) {
     console.error("❌ Build failed", result.logs);
     process.exit(1);
   }
 }
-
-console.log("📄 Generating .d.ts files...");
-const { spawn } = Bun;
-const proc = spawn(["tsc", "--emitDeclarationOnly"]);
-const code = await proc.exited;
-
-if (code !== 0) {
-  console.error("❌ Type generation failed");
-  process.exit(1);
-}
-
-console.log("✅ Build complete!");

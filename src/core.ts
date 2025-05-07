@@ -1,11 +1,7 @@
 import { getConsoleProvider } from "./console-provider.ts";
-import { FileProvider } from "./file-provider.ts";
 import type { LogEnt, Provider } from "./types.ts";
 
-const defaultProviders = [
-  getConsoleProvider(),
-  new FileProvider({ infoPath: "./hello.txt" }),
-];
+const defaultProviders = [getConsoleProvider()];
 
 export class LoggerCore {
   loggerStreams: TransformStream<LogEnt, LogEnt> = new TransformStream();

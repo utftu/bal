@@ -1,29 +1,11 @@
-import { createLogger } from "./src/pinod.ts";
+import { FileProvider } from "pinod/file-provider";
+import { createLogger } from "./dist/pinod.ts";
 
 const logger = createLogger();
-// logger.prefix = "/hello";
-// logger.core.providers[1].oneline = false;
+logger.core.addProvider(new FileProvider({ infoPath: "./hello.txt" }));
 
-logger.error("not error' \" text", new Error("errot text"));
-const child = logger.child({ prefix: "/child1", props: { a: "b" } });
-child.log("");
+// const child = logger.child({ prefix: "/child1", props: { a: "b" } });
 
-// const error = new Error("hello");
+// import { FileProvider } from "./dist/types/file-provider.d.ts";
 
-// const json = JSON.stringify(
-//   {
-//     message: error.message,
-//     stack: error.stack,
-//   },
-//   null,
-//   2
-// );
-
-// console.log("-----", "json", json);
-
-// console.error("");
-// console.error(new Error("hello"));
-// console.log("-----", "1");
-// console.log(error);
-// console.log("-----", "2");
-// console.log(error.stack + "");
+// const a: FileProvider = new FileProvider({ infoPath: "12" });

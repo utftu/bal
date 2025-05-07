@@ -3,7 +3,11 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "build": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
+    "build-file-provider": "bun build ./src/file-provider.ts --target node --outdir ./dist",
+    "build-pinod": "bun build ./src/pinod.ts --outdir ./dist --env=disable",
+    "build": "bun run build-pinod && bun run build-file-provider && bun run types",
+    "build1": "bun run build-pinod && build-file-provider && && bun run types",
+    "build-old": "bun build ./src/pinod.ts --target node --outdir ./dist --env=disable && bun run types",
     "types": "tsc --project tsconfig.types.json"
   },
   "exports": {
@@ -20,6 +24,6 @@
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
