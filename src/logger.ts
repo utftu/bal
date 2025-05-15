@@ -1,5 +1,5 @@
 import { LoggerCore } from "./core.ts";
-import type { LevelConfig, LogEnt, Provider } from "./types.ts";
+import type { LevelConfig, Provider } from "./types.ts";
 
 const defaultLevelConfig: LevelConfig = {
   info: true,
